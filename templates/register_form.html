@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>注册页面</h1>
+
+    {% if form.errors %}
+        <p style="color: red;">
+            粗心可不好哦,看看还有什么地方漏掉了
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table  }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

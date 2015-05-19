@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>百度搜索大赛主页</title>
+</head>
+<h1><b>百度搜索大赛</b></h1>
+<body>
+<a href="/home/about/"> <h2>大赛介绍</h2> </a> <hr>
+<a href="/home/rule/"> <h2>大赛规则</h2> </a> <hr>
+<a href="/register/"> <h2>报名注册</h2> </a> <hr>
+<a href="/competition/"> <h2>开始比赛</h2> </a> <hr>
+<a href="/query/"> <h2>成绩查询</h2> </a> <hr>
+
+<form action="/login-in/" method="post">
+    {% csrf_token %}
+<input type="text" name="account"/>
+<input type="password" name="password"/>
+<input type="submit" value="log-in"/>
+</form>
+
+</body>
+</html>
