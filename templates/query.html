@@ -1,0 +1,16 @@
+<DOCTYPE HTML>
+<html>
+<head>
+    <title>查询成绩</title>
+</head>
+
+<body>
+    <table>
+        <tr><th>队伍</th><th>成绩</th></tr>
+        
+    {% for team in team_list %}
+    <tr><td>{{team.name}}</td><td>{{team.score}}</td><tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

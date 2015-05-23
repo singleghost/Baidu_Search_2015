@@ -6,7 +6,7 @@ from django.db import models
 class Team(models.Model):
     name = models.CharField(max_length = 30)
     account = models.CharField(max_length = 20)
-    password = models.CharField(max_length = 20)
+    password = models.CharField(max_length = 200)
     score = models.IntegerField(default=0,null=True,blank=True)
     time = models.IntegerField(default=0,null=True,blank=True)
     brand = models.IntegerField(default=0,null=True,blank=True)

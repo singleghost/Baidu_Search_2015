@@ -3,60 +3,15 @@
 <html>
 <head>
     <title>比赛页面</title>
-    <script>
-    function check_answer(ans,id)
-    {
-        var xmlhttp;
-        if(ans.length==0)
-            return;
-        if(window.XMLHttpRequest)
-        {//code for IE7+,etc
-        xmlhttp = new XMLHttpRequest();
-        }
-        else
-        {//code for IE6 IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange=function()
-        {
-        if(xmlhttp.readyState==4&&xmlhttp.status==200)
-        {
-            obj = JSON.parse(xmlhttp.responseText);
-        if(obj.flag == 1){
-            document.getElementsByClassName("yes")[id].style.visibility="visible";
-            document.getElementsByClassName("no")[id].style.visibility="hidden";
-            //题目答对后无法修改输入框了
-            document.getElementsByName("ans")[id].disabled=true;
-        }
-        else{
-            document.getElementsByClassName("yes")[id].style.visibility="hidden";
-            document.getElementsByClassName("no")[id].style.visibility="visible";
-        }
-        }
-        
-        }
-        xmlhttp.open("POST","/verify/"+ans+"/"+id+"/",true);
-        xmlhttp.send();
-    }
-    function time()
-    {
-    alert("比赛开始");
-    }
-    function change_color(x)
-    {x.style.background="#FFE4C4";}
-    
-    function add_id()
-    {
-        for(var i=0;i<25;i++)
-            document.getElementsByName("ans")[i].id=String(i);
-    }
-    </script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"> </script>
+    <script src="{% static "js/competition.js/" %}"> </script>
 </head>
-<body onload="time()">
+<body onload="startTime()" >
+    <div id="timer"> </div>
+    <input id="end" type="submit" value="交卷"/>
     <ol>
     {% for qt in qt_list %}
     <li>{{qt.question}}</li>
-
     <form action="/verify/" method="post">
     <b><em>答案</em></b>
     <input type="text" name="ans" id="" onfocus="change_color(this)" onkeyup="check_answer(this.value,this.id)"/>
@@ -68,6 +23,7 @@
 
     <script>
         add_id();
+        alert("比赛开始");
     </script>
 </body>
 

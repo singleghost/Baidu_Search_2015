@@ -6,16 +6,23 @@
     body {background-color:darkolivegreen;}
     p {color:blue;}
     </style>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"> </script>   
+    <script>
+$(document).ready(function(){
+        $(".link").mouseenter(function(){$(this).css("font-size","40px");});
+        $(".link").mouseleave(function(){$(this).css("font-size","30px");});
+        });
+    </script>
     <title>百度搜索大赛主页</title>
 </head>
 <h1 style="text-align:center;color:Navy;"><b>百度搜索大赛</b></h1>
 <body background="{% static "images/baidu_home.jpg/" %}">
 
 <div style="font-family:arial;font-size:20px;text-align:center">
-<a href="/home/about/"> <h2>大赛介绍</h2> </a> <hr>
-<a href="/home/rule/"> <h2>大赛规则</h2> </a> <hr>
-<a href="/register/"> <h2>报名注册</h2> </a> <hr>
-<a href="/query/"> <h2>成绩查询</h2> </a> <hr>
+<a href="/home/about/"> <h2 class="link">大赛介绍</h2> </a> <hr>
+<a href="/home/rule/"> <h2 class="link">大赛规则</h2> </a> <hr>
+<a href="/register/"> <h2 class="link">报名注册</h2> </a> <hr>
+<a href="/query/"> <h2 class="link">成绩查询</h2> </a> <hr>
 </div>
 <br/>
 <form action="/login-in/" method="post">

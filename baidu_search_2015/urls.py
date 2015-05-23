@@ -21,7 +21,9 @@ from django.contrib.auth.views import login, logout
 from login.views import login_view, logout_view
 #from score_query.views import show_query_res
 #from home.views import showpage
-from competition.views import compete,verify
+from competition.views import compete,verify,end
+from score_query.views import query
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -30,11 +32,14 @@ urlpatterns = [
  #   url(r'^score_query/$', show_query_res),
   #  url(r'^competition/$', compete),
     url(r'^register/success/$', success),
-    url(r'^home/$', TemplateView.as_view(template_name='home.html'),
+    url(r'^$', TemplateView.as_view(template_name='home.html'),
         name ='home'),
     url(r'^home/about/$',TemplateView.as_view(template_name="about.html")),
     url(r'^home/rule/$',TemplateView.as_view(template_name="rule.html")),
+    url(r'^gameover/$', TemplateView.as_view(template_name="gameover.html")),
     url(r'^login-in/$', login_view),
     url(r'^competition/$',compete ),
     url(r'^verify/(.*?)/(\d+)/$',verify),
+    url(r'^query/$', query),
+    url(r'^end/(\d+)/(\d+)/$', end),
 ]
