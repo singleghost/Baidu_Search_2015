@@ -21,7 +21,7 @@ class Team_member(models.Model):
     phone_number = models.IntegerField()
     phone_number_short = models.IntegerField(default=111111,null=True,blank = True)
     profession = models.CharField(max_length = 30,blank=True)
-    student_ID = models.IntegerField()
+    student_ID = models.IntegerField(default=0,null=True,blank=True)
     team = models.ForeignKey(Team)
     def __unicode__(self):
         return u'%s   号码%d   短号%d     队伍%s' % (self.name, self.phone_number,

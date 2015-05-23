@@ -21,7 +21,7 @@ from django.contrib.auth.views import login, logout
 from login.views import login_view, logout_view
 #from score_query.views import show_query_res
 #from home.views import showpage
-from competition.views import compete
+from competition.views import compete,verify
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -36,4 +36,5 @@ urlpatterns = [
     url(r'^home/rule/$',TemplateView.as_view(template_name="rule.html")),
     url(r'^login-in/$', login_view),
     url(r'^competition/$',compete ),
+    url(r'^verify/(.*?)/(\d+)/$',verify),
 ]

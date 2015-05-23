@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +26,7 @@ SECRET_KEY = '!m5(xnuf&4#7^pc9&%u&+3_add()a8p!kd&os%ja*+h_%s23id'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -82,6 +83,9 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS=(
+        STATIC_PATH,
+        )
 WSGI_APPLICATION = 'baidu_search_2015.wsgi.application'
 
 

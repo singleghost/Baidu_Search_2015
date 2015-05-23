@@ -1,20 +1,28 @@
+<!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
+    <style type="text/css">
+    body {background-color:darkolivegreen;}
+    p {color:blue;}
+    </style>
     <title>百度搜索大赛主页</title>
 </head>
-<h1><b>百度搜索大赛</b></h1>
-<body>
+<h1 style="text-align:center;color:Navy;"><b>百度搜索大赛</b></h1>
+<body background="{% static "images/baidu_home.jpg/" %}">
+
+<div style="font-family:arial;font-size:20px;text-align:center">
 <a href="/home/about/"> <h2>大赛介绍</h2> </a> <hr>
 <a href="/home/rule/"> <h2>大赛规则</h2> </a> <hr>
 <a href="/register/"> <h2>报名注册</h2> </a> <hr>
-<a href="/competition/"> <h2>开始比赛</h2> </a> <hr>
 <a href="/query/"> <h2>成绩查询</h2> </a> <hr>
-
+</div>
+<br/>
 <form action="/login-in/" method="post">
     {% csrf_token %}
-<input type="text" name="account"/>
-<input type="password" name="password"/>
-<input type="submit" value="log-in"/>
+    <label for="account">账号</label><input type="text" name="account" id="account"/>
+    <label for="password">密码</label><input type="password" name="password" id="password"/>
+<input type="submit" value="进入比赛"/>
 </form>
 
 </body>
