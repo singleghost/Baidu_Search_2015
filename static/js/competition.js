@@ -1,10 +1,5 @@
     var m = "0";
     var s = "0";
-    function gameover()
-    {
-
-
-    }
      function startTime()
     {
     // add a zero in front of numbers<10

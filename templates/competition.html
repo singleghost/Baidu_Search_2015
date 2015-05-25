@@ -5,10 +5,23 @@
     <title>比赛页面</title>
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"> </script>
     <script src="{% static "js/competition.js/" %}"> </script>
+    <script>
+    function sub()
+    {
+        var r=confirm("确定交卷?");
+        if(r==true){
+        url = "/end/"+m+"/"+s+"/";
+        $.get(url);
+        alert('提交成功');
+        }
+        else
+            return;
+    }
+    </script>
 </head>
 <body onload="startTime()" >
     <div id="timer"> </div>
-    <input id="end" type="submit" value="交卷"/>
+    <input id="end" type="button" value="交卷" onclick="sub()"/>
     <ol>
     {% for qt in qt_list %}
     <li>{{qt.question}}</li>
