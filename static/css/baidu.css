@@ -1,0 +1,549 @@
+
+h1{
+  margin: 16px 0;
+  line-height: 150%; 
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  text-align: center;
+}
+
+body{
+  font-size: 12px;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  background-color: transparent;
+  overflow: auto;
+
+}
+
+div#head{
+  background-color: #112244;
+  box-shadow: 1px 1px 2px #000;
+}
+
+div#head > div.container > h1,
+div#head > div.container > h3,
+div#head > div.container > p,
+div#head > div.jumbotron > div.container > h1,
+div#head > div.jumbotron > div.container > h3,
+div#head > div.jumbotron > div.container > p{
+  color: #fff;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+
+}
+
+div#head > div.container > h1,
+div#head > div.jumbotron > div.container > h1{
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div#head > div.container > h3,
+div#head > div.jumbotron > div.container > h3{
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  div#head > div.container > h1,
+  div#head > div.jumbotron > div.container > h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+
+  div#head > div.container > h3,
+  div#head > div.jumbotron > div.container > h3{
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+a.white_btn{
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  background-color: transparent;
+  color: #fff;
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.white_btn:hover,
+a.white_btn:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+a.whole{
+  border-style: none;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.whole:hover,
+a.whole:focus{
+  background-color: #c0c0ff;
+  color: #fff;
+}
+
+div.main > div{
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+@media (max-width: 767px) {
+  div.main > div{
+      padding: 10px 30px;
+  }
+}
+
+div.row > div > h1,
+div.row > div > h3,
+div.row > div > p{
+  margin: 12px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+
+div.row > div > h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.row > div > h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+div.row > div > p,
+div.row > div > ol > li > p,
+div.row > div > ul > li > p{
+  margin: 10px 0 0 0;
+  line-height: 150%; 
+  font-size: 14px;
+}
+
+div.row > div > p.info{
+  display: block;
+  border-color: #888;
+  border-width: 1px;
+  border-style: dashed;
+  background-color: transparent;
+  margin: 0 10px auto;
+  padding: 5px 20px;
+
+  color: #555;
+}
+
+div.container{
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+
+p.problem{
+  font-family: inherit;
+  font-size: 15px;
+  color: #111;
+  font-weight: bold;
+}
+
+label.single_answer{
+  display: block;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border-width:  1px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  background-color: transparent;
+  margin:  2px auto;
+  white-space: normal;
+
+  -webkit-transition: 0.2s ease-in-out; /* Safari and Chrome */
+     -moz-transition: 0.2s ease-in-out; /* Firefox 4 */
+       -o-transition: 0.2s ease-in-out; /* Opera */
+          transition: 0.2s ease-in-out;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  font-size: 14px;
+  font-family: inherit;
+}
+
+label.single_answer.active,
+label.single_answer:active{
+  background-color: #888;
+  color: #eee;
+}
+label.single_answer:hover{
+
+  border-style: solid;
+  border-color: #888;
+}
+
+@media (min-width: 768px) {
+  label.single_answer{
+    width: 25%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  label.single_answer{
+    width: 25%;
+    float: left;
+  }
+}
+
+
+
+
+.left{
+  text-align: left;
+}
+
+.center{
+  text-align: center;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  vertical-align: middle;
+}
+
+.right{
+  text-align: right;
+}
+
+div.login_form{
+    padding: 30px 10px;
+}
+div.login{
+    padding: 40px;
+    margin: 10px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;   
+            border-radius: 5px;
+    background-color: #ebebeb;
+}
+
+
+div.login_group > p > input.form-control{
+    width: 100%;
+}
+
+input#login_password,
+input#login_username,
+input.form_padding{
+  padding-left: 36px;  
+}
+
+div.login_right{
+    height: 100%;
+    vertical-align: middle;
+}
+
+input.login_submit{
+  width: 100%;
+}
+
+form.reg_form{
+  background-color: #e8e8e8;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+form.reg_form > div{
+  margin-top: 10px;
+}
+
+div.callback_error > p{
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* footer style*/
+div.footer{
+  text-align: center;
+  background-color: #ebebeb;
+}
+
+footer > p{
+    font-size: 8px;
+    color: #666;
+}
+
+footer > hr{
+    width: 50%;
+    text-align: left;
+    color: #666;
+}
+
+
+/* color define*/
+
+.light_blue{
+  background-color: #ddeeff;
+}
+
+.light_red{
+  background-color: #ffddee;
+}
+
+.light_grey{
+  background-color: #f0f0f0;
+}
+/*transition*/
+
+
+
+
+
+form.header_search,
+form.header_search > input,
+form.header_search > label{
+  background-color: transparent;
+  display: block;
+}
+
+form.header_search{
+  vertical-align: middle;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  height: 20px;
+  border: 0 none;
+}
+
+form.header_search > input{
+  width: 70px;
+  height: 20px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  color: #ebebeb;
+  background-color: #444;
+  font-family: inherit;
+  outline: none;
+  border: 0 none;
+  border-radius: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+          tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+  -webkit-transition: 0.4s ease-in-out; /* Safari and Chrome */
+     -moz-transition: 0.4s ease-in-out; /* Firefox 4 */
+       -o-transition: 0.4s ease-in-out; /* Opera */
+          transition: 0.4s ease-in-out;
+}
+
+form.header_search > input:focus{
+  width: 140px;
+  color: #232323;
+  background-color: #ebebeb;
+}
+
+@media (max-width: 767px){
+  form.header_search,
+  form.header_search > input,
+  form.header_search > label{
+    background-color: transparent;
+    display: none;
+  }
+}
+
+/*  select style
+ *  and questionare style
+ */
+
+div#important{
+  margin: 20px;
+  border-style: solid;
+  border-color: #888;
+  border-radius: 12px;
+  border-width: 4px;
+  padding: 10px 30px;
+  z-index: 50;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
+  background-color: #fff;
+}
+
+div#important > h1.important,
+div#important > h3.important,
+div#important > p.important{
+  color: #FF0000;
+}
+div#important > h3.important{
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+/*
+ *  .bottom_info part
+ *   including timing part
+ *
+ */
+
+div.bottom_info{
+    /* position */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+  background-image: -webkit-linear-gradient( rgba(242, 242, 242, 0.9), rgba(222, 222, 222, 0.9));
+  box-shadow: -1px 0 1px 1px rgba(0,0,0, 0.25);
+  color: #7F7F7F;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  font-weight: bold;
+  z-index: 5;
+}
+
+div.bottom_info > div.bottom_logo{
+  margin: 5px 5px 5px 10px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  background: none;
+  position: relative;
+  float: left;
+}
+
+div.bottom_info > div.bottom_brand{
+  margin: 5px ;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: left;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+div.bottom_info > div.timing{
+  margin: 10px 50px 5px 10px;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: right;
+
+  text-align: right;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  color: #444;
+}
+
+
+
+div.select > div,
+div.select > form{
+  clear: both;
+  margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  div.select > div > label{
+    width: 100%;
+    text-align: center;
+  }
+  div.select > form > input[type="submit"]{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  div.select > div > input{
+    width: 440px;
+    position: relative;
+    float: left;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+
+  div.select > div > label{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  div.select > form > input[type="text"]{
+    width: 440px;
+    position: relative;
+    float: left;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+
+  div.select > form > input[type="submit"]{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  div.select > div > input{
+    width: 300px;
+  }
+  div.select > form > input[type="text"]{
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.select > div > input{
+    width: 400px;
+  }
+  div.select > form > input[type="text"]{
+    width: 400px;
+  }
+}
+
+.btn_enlarge{
+  width: 90px;
+}
+
+.btn_enlarge:focus,
+.btn_enlarge:hover{
+  width: 80%;
+  -webkit-transition:width 0.9s ease-in-out; /* Safari and Chrome */
+     -moz-transition:width 0.9s ease-in-out; /* Firefox 4 */
+       -o-transition:width 0.9s ease-in-out; /* Opera */
+          transition:width 0.9s ease-in-out;
+}
