@@ -1,40 +1,198 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<style>
-    ul.errorlist{
-    margin:0;
-    padding:0;
-    }
-    .errorlist li {
-    background-color: red;
-    color: white;
-    display:block;
-    font-size:10px;
-    margin: 0 0 3px;
-    padding: 4px 5px;
-    }
-</style>
-    <title>Register</title>
-</head>
-<body background="/images/baidu_home.jpg">
-    <h1>注册页面</h1>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Let_Us_Search</title>
+<style type="text/css">
+#baoming{
+	width:700px;
+    height:1900px;
+	margin:50px auto;
+	border:1px solid #ddd;
+	box-shadow:0px 0px 15px #ddd;
+	padding:25px;
+	
+	}
 
-    {% if form.errors %}
+#baidulogo{
+    text-align:right;
+	}
+#theme_img{
+    text-align:center;
+	border: 1px solid #ddd;
+}
+#baomingxingshi{
+    font-family:"微软雅黑";
+	font-size:25px;
+	text-indent:2em;
+}
+
+#bmxz{
+    padding:0px 29px 0px 29px;
+}
+
+li{
+    line-height:25px;
+	font-family:"微软雅黑";	
+}
+
+
+#leader{
+   
+	text-align:right;
+	color: orange;
+	font-size:25px;
+	font-family:"微软雅黑"；
+    
+}
+
+#team_name{
+    display:inline;
+	color:grey;
+	font-family:"微软雅黑"；
+}
+
+.div_leader_info{
+    padding:0px 50px 0px 50px;	
+	width:250px;
+	float:left;
+}
+
+.div_leader_info_2{
+    padding:0px 50px 0px 50px;	
+	width:250px;
+	float:right;
+}
+
+
+
+#name{
+    line-height:0px;
+	font-family:"微软雅黑"
+}
+input{
+    height:25px;
+	border-radius:5px;
+}
+
+select{
+    height:30px;
+	border-radius:5px;
+}
+
+.role_pic{
+    float:right;
+}
+
+.role_pic_2{
+    float:left;
+}
+
+hr{
+    color:orange;
+}
+
+#anniu{
+    width:400px;
+	height:36px;
+	margin:auto;
+	
+}
+
+.btn1{
+    height:36px; width:99px; background:url("{% static "images/btn1.png" %}")
+}
+
+.btn2{
+    height:36px; width:99px; background:url("{% static "images/btn2.png" %}")
+}
+</style>
+</head>
+
+<body>
+<div id="baoming">
+    <div id="theme_img"><img src="{% static "images/theme_img.jpg" %}"/></div>
+   <hr/>
+   <h1 id="baomingxingshi">报名须知:</h1>
+   <div id="bmxz">
+      <ul>
+	     <li>游戏时间：6月5日（周五）下午。</li>
+	     <li>游戏地点：浙大紫金港情人坡。</li>
+	     <li>以3人为一组，进行团体积分赛,1名队长，2名搜索特工。</li>
+	     <li>游戏环节分为两个部分。PART1:撕扯吧 PART2:搜索吧。</li>
+      </ul>
+   </div>
+   <br/>
+   <hr/>
+
+  <form  method="post" action="">  
+   <h2 id="leader">队长信息 LEADER INFO</h2>
+   
+ 
+   <div class="div_leader_info">
+       <tr><th><label for="id_m1_name">队长姓名:</label></th><td>{{form.m1_name}}</td></tr>
+       <tr><th><label for="id_m1_sex">性别:</label></th><td>{{form.m1_sex}}</td></tr></br>
+        <tr><th><label for="id_m1_phone_number">手机号码:</label></th><td>{{form.m1_phone_number}}</td></tr></br>
+        <tr><th><label for="id_m1_phone_number_short">短号(可选):</label></th><td>{{form.m1_phone_number}}</td></tr>
+   </div>
+   <div class="role_pic"><img src="{% static "images/leader.png" %}"/></div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+
+   <h2 id="leader">1号特工AGENT NO.1</h2>
+   
+ 
+   <div class="div_leader_info_2">
+       <tr><th><label for="id_m2_name">姓名:</label></th><td>{{form.m2_name}}</td></tr>
+       <tr><th><label for="id_m2_sex">性别:</label></th><td>{{form.m2_sex}}</td></tr></br>
+        <tr><th><label for="id_m2_phone_number">手机号码:</label></th><td>{{form.m2_phone_number}}</td></tr><br>
+        <tr><th><label for="id_m2_phone_number_short">短号(可选):</label></th><td>{{form.m2_phone_number_short}}</td></tr>
+   </div>
+   <div class="role_pic_2"><img src="{% static "images/agent1.png" %}"/></div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+
+   <h2 id="leader">2号特工AGENT NO.2</h2>
+   
+ 
+   <div class="div_leader_info">
+       <tr><th><label for="id_m3_name">姓名:</label></th><td>{{form.m3_name}}</td></tr>
+       <tr><th><label for="id_m3_sex">性别:</label></th><td>{{form.m3_sex}}</td></tr></br>
+        <tr><th><label for="id_m3_phone_number">手机号码:</label></th><td>{{form.m3_phone_number}}</td></tr></br>
+        <tr><th><label for="id_m3_phone_number_short">短号(可选):</label></th><td>{{form.m3_phone_number_short}}</td></tr>
+   </div>
+   <div class="role_pic"><img src="{% static "images/agent2.png" %}"/></div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+   
+   <div class="div_leader_info">
+   <h2 id="leader">队伍信息</h2>
+       <tr><th><label for="id_team_name">队伍名称:</label></th><td>{{form.team_name}}</td></tr><br>
+       <tr><th><label for="id_email">E-mail(接收认证邮件):</label></th><td>{{form.email}}</td></tr><br>
+       <tr><th><label for="id_account">队伍账号:</label></th><td>{{form.account}}</td></tr><br>
+       <tr><th><label for="id_password">队伍密码:</label></th><td>{{form.password}}</td></tr>
+   </div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+
+   {% if form.errors %}
+   <div>
         <p style="color: red;">
             粗心可不好哦,看看还有什么地方漏掉了
         </p>
+   <br/><br/>
+   </div>
     {% endif %}
 
-    <form action="" method="post">
-        {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
-        <input type="submit" value="提交">
-    </form>
-    <a href="/home/">
-        <input type="button" value="返回主页"/>
-    </a>
+
+   <div id="anniu">
+
+   <input class="btn1" type="submit" value="" name="submitBtn" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <input class="btn2" type="reset" value=""  />
+   </div>
+  </form>
+  
+   
+ 
+ 
+   
+</div>
 </body>
 </html>
