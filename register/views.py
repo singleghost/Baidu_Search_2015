@@ -53,11 +53,11 @@ def register(request):
                             is_superuser = False,
                             )
             user_info.save()
-            #给参赛队伍发送一封包含账号密码的邮件
+            #给参赛队伍发送一封包含账号密码的邮件V
             message = u'''这是一封认证邮件\n您的队伍已经成功报名参赛\n
                 队伍账号为   %s\n登录密码为   %s\n此账号和密码用来在比赛的
                 时候登录 请勿遗忘''' % (cd['account'], cd['password'])
-            #send_mail('欢迎报名百度搜索大赛',message,'3140104773@zju.edu.cn',
+            #send_mail('欢迎报名百度搜索大赛',message,'@zju.edu.cn',
              #       [cd['email']], fail_silently=False)
             return HttpResponseRedirect('/register/success/')
     else:
@@ -65,4 +65,4 @@ def register(request):
     return render_to_response('register_form.html',{'form':form},)
 
 def success(request):
-    return HttpResponse('Successful!')
+    return HttpResponse('<h1>注册成功!</h1>')

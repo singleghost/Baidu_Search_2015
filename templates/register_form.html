@@ -7,7 +7,7 @@
 <style type="text/css">
 #baoming{
 	width:700px;
-    height:1900px;
+    height:2550px;
 	margin:50px auto;
 	border:1px solid #ddd;
 	box-shadow:0px 0px 15px #ddd;
@@ -59,6 +59,11 @@ li{
 	float:left;
 }
 
+.div_leader_info_3{
+    padding:0px 50px 0px 50px;	
+	width:250px;
+	float:center;
+}
 .div_leader_info_2{
     padding:0px 50px 0px 50px;	
 	width:250px;
@@ -68,12 +73,13 @@ li{
 
 
 #name{
-    line-height:0px;
+    line-height:20px;
 	font-family:"微软雅黑"
 }
 input{
-    height:25px;
+    height:20px;
 	border-radius:5px;
+    width:200px;
 }
 
 select{
@@ -90,7 +96,7 @@ select{
 }
 
 hr{
-    color:orange;
+    color:grey;
 }
 
 #anniu{
@@ -130,11 +136,11 @@ hr{
    <h2 id="leader">队长信息 LEADER INFO</h2>
    
  
-   <div class="div_leader_info">
-       <tr><th><label for="id_m1_name">队长姓名:</label></th><td>{{form.m1_name}}</td></tr>
-       <tr><th><label for="id_m1_sex">性别:</label></th><td>{{form.m1_sex}}</td></tr></br>
-        <tr><th><label for="id_m1_phone_number">手机号码:</label></th><td>{{form.m1_phone_number}}</td></tr></br>
-        <tr><th><label for="id_m1_phone_number_short">短号(可选):</label></th><td>{{form.m1_phone_number}}</td></tr>
+   <div class="div_leader_info" style="background-image:url(images/agt2.png)" >
+       <p id="name"><tr><th><label for="id_m1_name">队长姓名:</label></th><td class="input">{{form.m1_name}}</td></tr></p>
+       <p id="name"><tr><th><label for="id_m1_sex">性别:</label><br></th><td>{{form.m1_sex}}</td></tr></br></p>
+       <p id="name"> <tr><th><label for="id_m1_phone_number">手机号码:</label></th><td>{{form.m1_phone_number}}</td></tr></br></p>
+       <p id="name"> <tr><th><label for="id_m1_phone_number_short">短号(可选):</label></th><td>{{form.m1_phone_number_short}}</td></tr></p>
    </div>
    <div class="role_pic"><img src="{% static "images/leader.png" %}"/></div>
    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
@@ -143,38 +149,41 @@ hr{
    
  
    <div class="div_leader_info_2">
-       <tr><th><label for="id_m2_name">姓名:</label></th><td>{{form.m2_name}}</td></tr>
-       <tr><th><label for="id_m2_sex">性别:</label></th><td>{{form.m2_sex}}</td></tr></br>
-        <tr><th><label for="id_m2_phone_number">手机号码:</label></th><td>{{form.m2_phone_number}}</td></tr><br>
-        <tr><th><label for="id_m2_phone_number_short">短号(可选):</label></th><td>{{form.m2_phone_number_short}}</td></tr>
+       <p id="name"><tr><th><label for="id_m2_name">姓名:</label><br></th><td class="input">{{form.m2_name}}</td></tr></p>
+       <p id="name"><tr><th><label for="id_m2_sex">性别:</label><br></th><td>{{form.m2_sex}}</td></tr></br></p>
+       <p id="name"><tr><th><label for="id_m2_phone_number">手机号码:</label></th><td>{{form.m2_phone_number}}</td></tr><br></p>
+       <p id="name"> <tr><th><label for="id_m2_phone_number_short">短号(可选):</label></th><td>{{form.m2_phone_number_short}}</td></tr></p>
    </div>
    <div class="role_pic_2"><img src="{% static "images/agent1.png" %}"/></div>
    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
 
    <h2 id="leader">2号特工AGENT NO.2</h2>
-   
  
-   <div class="div_leader_info">
-       <tr><th><label for="id_m3_name">姓名:</label></th><td>{{form.m3_name}}</td></tr>
-       <tr><th><label for="id_m3_sex">性别:</label></th><td>{{form.m3_sex}}</td></tr></br>
-        <tr><th><label for="id_m3_phone_number">手机号码:</label></th><td>{{form.m3_phone_number}}</td></tr></br>
-        <tr><th><label for="id_m3_phone_number_short">短号(可选):</label></th><td>{{form.m3_phone_number_short}}</td></tr>
+   <div class="div_leader_info" >
+       <p id="name"><tr><th><label for="id_m3_name">姓名:</label><br></th><td class="input">{{form.m3_name}}</td></tr></p>
+       <p id="name"><tr><th><label for="id_m3_sex">性别:</label><br></th><td>{{form.m3_sex}}</td></tr></br></p>
+       <p id="name"><tr><th><label for="id_m3_phone_number">手机号码:</label></th><td>{{form.m3_phone_number}}</td></tr></br></p>
+       <p id="name"><tr><th><label for="id_m3_phone_number_short">短号(可选):</label></th><td>{{form.m3_phone_number_short}}</td></tr></p>
    </div>
    <div class="role_pic"><img src="{% static "images/agent2.png" %}"/></div>
    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
    
-   <div class="div_leader_info">
+   <div style="div_leader_info">
    <h2 id="leader">队伍信息</h2>
-       <tr><th><label for="id_team_name">队伍名称:</label></th><td>{{form.team_name}}</td></tr><br>
-       <tr><th><label for="id_email">E-mail(接收认证邮件):</label></th><td>{{form.email}}</td></tr><br>
-       <tr><th><label for="id_account">队伍账号:</label></th><td>{{form.account}}</td></tr><br>
-       <tr><th><label for="id_password">队伍密码:</label></th><td>{{form.password}}</td></tr>
+   <div style="text-indent:40px">
+   <p id="name"><label  for="id_team_name">队伍名称:</label>{{form.team_name}}</p>
+   <p id="name"><label  for="id_email">队伍邮箱:</label>{{form.email}}</p>
+   <p id="name"><label  for="id_account">队伍账号:</label>{{form.account}}</P>
+   <p id="name"><label  for="id_password">队伍密码:</label>{{form.password}}</p>
+    <br>
+   <p id="inform">请牢记自己队伍的帐号、密码、邮箱和名称，邮箱供验证和找回密码。</p>
    </div>
-   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+   </div>
+   <br/>
 
    {% if form.errors %}
-   <div>
-        <p style="color: red;">
+   <div style="text-indent:40px;font-size:25px">
+        <p style="color: red;" >
             粗心可不好哦,看看还有什么地方漏掉了
         </p>
    <br/><br/>
@@ -188,11 +197,6 @@ hr{
    <input class="btn2" type="reset" value=""  />
    </div>
   </form>
-  
-   
- 
- 
-   
 </div>
 </body>
 </html>
